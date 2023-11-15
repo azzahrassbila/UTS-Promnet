@@ -1,91 +1,102 @@
+body {
+    margin: 10; /* Menghilangkan margin default body */
+    font-family: 'Arial', sans-serif;
+}
+
 .header {
+    background-color: white;
+    color: cornflowerblue;
+    padding: 15px;
+    width: 100%;
+    z-index: 1000; /* Menempatkan header di atas konten lainnya */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan sedikit bayangan untuk efek visual */
+}
+
+nav {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.header h1 {
-    font-size: 30px; 
-    margin-right: 1000px;
-}
-
-.header nav {
-    display: flex;
-}
-
-.header nav a {
-    font-size: 25px; 
-    margin-right: 5px;
-}
-
-.jumbotron {
-    background-image: url('foto.JPG'); 
-    background-size: cover;
-    background-position: center;
-    color : white;
-    text-align: center;
-    padding: 20px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-}
-
-.jumbotron h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.jumbotron p {
-    font-size: 18px;
-}
-
-.tombol {
-    background-color: #007bff; 
-    color: #fff; 
-    padding: 10px 20px; 
-    border: none;
-    border-radius: 4px; 
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.tombol:hover {
-    background-color: #0056b3; 
-}
-
-.section {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
-
-.judul {
+h1 {
+    margin: 10; /* Menghilangkan margin default h1 */
     font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    margin: 10;
+    padding: 10;
+    display: flex;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: cornflowerblue;
     font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.isi {
-    font-size: 18px;
+a:hover {
+    color: slateblue; /* Ganti warna saat dihover sesuai kebutuhan Anda */
 }
 
-.poin {
-    font-size: 18px;
-    list-style-type: disc;
-    margin-left: 20px;
+.content {
+    margin-top: 80px; /* Menambahkan margin atas sesuai tinggi header */
+    padding: 20px; /* Contoh padding untuk memberikan ruang di bawah header */
 }
 
-.tombol {
-    background-color: #007bff;
-    color: #fff;
+
+#jumbotron {
+    position: relative;
+    height: 100vh; /* Mengatur tinggi sesuai dengan tinggi viewport */
+    overflow: hidden; /* Menghindari overflow jika ada konten yang lebih besar dari viewport */
+}
+
+#jumbotron-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#jumbotron-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Membuat gambar cover secara proporsional */
+}
+
+#text-overlay {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    transform: translate(0, -50%);
+    text-align: left;
+    color: white; /* Warna teks */
+    padding: 20px; /* Padding untuk memberikan ruang di sekitar teks */
+    width: 40%; /* Lebar elemen teks, sesuaikan dengan kebutuhan Anda */
+    z-index: 1; /* Menempatkan teks di atas gambar */
+}
+
+.btn-resume {
+    display: inline-block;
     padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px; /* Menjadikan tombol bulat */
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Menambahkan transisi warna latar belakang */
 }
 
-.tombol:hover {
-    background-color: #0056b3;
+.btn-resume:hover {
+    background-color: #3498db; /* Warna latar belakang saat tombol dihover */
+}
+
+.btn-resume:active {
+    background-color: #2c3e50; /* Warna latar belakang saat tombol ditekan */
+    color: white; /* Warna teks saat tombol ditekan */
 }
